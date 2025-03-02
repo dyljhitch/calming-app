@@ -1,0 +1,483 @@
+/* src/styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+  min-height: 100vh;
+  line-height: 1.6; /* Better readability */
+}
+
+/* App Layout */
+.app-container {
+  max-width: 600px; /* Wider for desktop, still mobile-friendly */
+  margin: 0 auto;
+  padding: 40px 20px; /* Consistent padding */
+}
+
+.app-title {
+  color: #000000;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 700; /* Bolder title */
+  transition: opacity 0.3s ease; /* Fade on load */
+}
+
+.app-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between sections */
+}
+
+/* SOS Button Styles */
+.sos-container {
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Subtle lift on hover */
+}
+
+.sos-container:hover {
+  transform: translateY(-5px);
+}
+
+.sos-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sos-button:hover {
+  background-color: #4b5563;
+  transform: scale(1.05);
+}
+
+.sos-button:active {
+  transform: scale(0.95);
+}
+
+.breathing-text {
+  font-size: 36px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.breathing-circle {
+  width: 120px;
+  height: 120px;
+  background-color: #d1d5db;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.cycle-count {
+  color: #4b5563;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.stop-button {
+  color: #4b5563;
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 20px;
+  transition: color 0.3s ease;
+}
+
+.stop-button:hover {
+  color: #000000;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Mood Tracker Styles */
+.mood-tracker-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.mood-tracker-container:hover {
+  transform: translateY(-5px);
+}
+
+.mood-tracker-title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mood-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.mood-select:focus {
+  outline: none;
+  border-color: #4b5563;
+}
+
+.log-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.log-button:hover {
+  background-color: #4b5563;
+  transform: scale(1.05);
+}
+
+.mood-table-wrapper {
+  margin-top: 20px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mood-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.mood-table th,
+.mood-table td {
+  padding: 12px;
+  text-align: left;
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.mood-table th {
+  background-color: #d1d5db;
+  font-weight: bold;
+  color: #000000;
+}
+
+.mood-table td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mood-table tr:last-child td {
+  border-bottom: none;
+}
+
+.mood-table tr:hover {
+  background-color: #f3f4f6;
+}
+
+/* Coping Toolbox Styles */
+.toolbox-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.toolbox-container:hover {
+  transform: translateY(-5px);
+}
+
+.toolbox-title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.toolbox-list {
+  list-style: none;
+}
+
+.toolbox-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin: 5px 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.toolbox-button:hover {
+  background-color: #4b5563;
+  transform: scale(1.05);
+}
+
+.tool-detail {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tool-name {
+  color: #000000;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.tool-description {
+  color: #4b5563;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background-color: #4b5563;
+  transform: scale(1.05);
+}
+
+/* Journal Styles */
+.journal-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.journal-container:hover {
+  transform: translateY(-5px);
+}
+
+.journal-title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.journal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journal-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.journal-input:focus {
+  outline: none;
+  border-color: #4b5563;
+}
+
+.journal-submit-button {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.journal-submit-button:hover {
+  background-color: #4b5563;
+  transform: scale(1.05);
+}
+
+.journal-log {
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.journal-entry {
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.journal-entry:last-child {
+  border-bottom: none;
+}
+
+.journal-timestamp {
+  display: block;
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 5px;
+}
+
+.journal-text {
+  color: #000000;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Resource Hub Styles */
+.resource-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.resource-container:hover {
+  transform: translateY(-5px);
+}
+
+.resource-title {
+  color: #000000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.resource-list {
+  list-style: none;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.3s ease;
+}
+
+.resource-item:hover {
+  background-color: #f3f4f6;
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+.resource-link {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+  color: #4b5563;
+}
+
+.resource-description {
+  color: #4b5563;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 20px 10px;
+  }
+
+  .app-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .app-sections {
+    gap: 30px;
+  }
+
+  .sos-button {
+    padding: 15px 40px;
+    font-size: 20px;
+  }
+
+  .breathing-text {
+    font-size: 28px;
+  }
+
+  .breathing-circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .mood-tracker-title,
+  .toolbox-title,
+  .journal-title,
+  .resource-title {
+    font-size: 20px;
+  }
+
+  .mood-select,
+  .journal-input {
+    font-size: 14px;
+  }
+
+  .log-button,
+  .toolbox-button,
+  .back-button,
+  .journal-submit-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

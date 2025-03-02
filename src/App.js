@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import SosButton from './components/SosButton';
+import MoodTracker from './components/MoodTracker';
+import CopingToolbox from './components/CopingToolbox';
+import Journal from './components/Journal';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1 className="app-title">Karys's Calm Companion</h1>
+      <div className="app-sections">
+        <SosButton />
+        <MoodTracker />
+        <CopingToolbox />
+        <Journal />
+      </div>
     </div>
   );
 }

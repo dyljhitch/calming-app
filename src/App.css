@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.app-sections {
+  animation: fadeIn 0.5s ease-in;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.app-title {
+  position: sticky;
+  top: 20px;
+  background: #ffffff;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.mood-table-wrapper::-webkit-scrollbar,
+.journal-log::-webkit-scrollbar {
+  width: 8px;
+}
+.mood-table-wrapper::-webkit-scrollbar-thumb,
+.journal-log::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
