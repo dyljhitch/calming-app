@@ -9,7 +9,7 @@ import Journal from './components/Journal';
 function App() {
   return (
     <div className="app-container">
-      <h1 className="app-title">Karys's Calm Companion</h1>
+      <h1 className="app-title">Calm Companion</h1>
       <div className="app-sections">
         <SosButton />
         <MoodTracker />
